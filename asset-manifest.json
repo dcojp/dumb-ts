@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dcojp.github.io/dumb-ts/static/css/main.9f1ed92c.css",
-    "main.js": "/dcojp.github.io/dumb-ts/static/js/main.1a40f83a.js",
-    "static/js/453.c57bc0d2.chunk.js": "/dcojp.github.io/dumb-ts/static/js/453.c57bc0d2.chunk.js",
-    "index.html": "/dcojp.github.io/dumb-ts/index.html",
-    "main.9f1ed92c.css.map": "/dcojp.github.io/dumb-ts/static/css/main.9f1ed92c.css.map",
-    "main.1a40f83a.js.map": "/dcojp.github.io/dumb-ts/static/js/main.1a40f83a.js.map",
-    "453.c57bc0d2.chunk.js.map": "/dcojp.github.io/dumb-ts/static/js/453.c57bc0d2.chunk.js.map"
+    "main.css": "/dumb-ts/static/css/main.9f1ed92c.css",
+    "main.js": "/dumb-ts/static/js/main.185d003c.js",
+    "static/js/453.c57bc0d2.chunk.js": "/dumb-ts/static/js/453.c57bc0d2.chunk.js",
+    "index.html": "/dumb-ts/index.html",
+    "main.9f1ed92c.css.map": "/dumb-ts/static/css/main.9f1ed92c.css.map",
+    "main.185d003c.js.map": "/dumb-ts/static/js/main.185d003c.js.map",
+    "453.c57bc0d2.chunk.js.map": "/dumb-ts/static/js/453.c57bc0d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f1ed92c.css",
-    "static/js/main.1a40f83a.js"
+    "static/js/main.185d003c.js"
   ]
 }
