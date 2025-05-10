@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { run } from "./db/mongo"
+
 import './App.css';
 import PostForm from './PostForm';
 import Timeline from './Timeline';
@@ -28,6 +31,12 @@ function App() {
   React.useEffect(() => {
     localStorage.setItem('miniSocialAppPosts', JSON.stringify(posts));
   }, [posts]);
+
+  React.useEffect(() => {
+    (async () => {
+      await run();
+    })();
+  })
 
   const addPost = (newPost: PostInput) => {
     setPosts(prevPosts => [
