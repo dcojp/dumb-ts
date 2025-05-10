@@ -1,38 +1,155 @@
-.App {
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', Osaka, 'MS PGothic', 'ＭＳ Ｐゴシック', sans-serif;
+  background-color: #f0f2f5; /* 少し優しい背景色 */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 700px; /* 少し広めに */
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff; /* 清潔感のある白 */
+  border-radius: 12px; /* 角を丸く */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* やわらかな影 */
+}
+
+.app-header {
   text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0; /* やさしい区切り線 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header h1 {
+  color: #2c3e50; /* 落ち着いたタイトル色 */
+  font-size: 2.2em; /* 少し大きめに */
+  margin-bottom: 0.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-subtitle {
+  color: #7f8c8d; /* 少し控えめなサブタイトル色 */
+  font-size: 0.9em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.post-form {
+  background-color: #f9f9f9; /* フォームエリアの背景 */
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.post-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold; /* ラベルを少し強調 */
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+  width: calc(100% - 24px); /* paddingを考慮 */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease; /* フォーカス時のアニメーション */
+}
+
+.post-form input[type="text"]:focus,
+.post-form textarea:focus {
+  border-color: #3498db; /* フォーカス色 */
+  outline: none;
+}
+
+.post-form textarea {
+  resize: vertical;
+  min-height: 80px; /* テキストエリアの最小の高さを設定 */
+}
+
+.submit-button {
+  background-color: #3498db; /* 優しくもはっきりとした青 */
   color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em; /* 少し大きめに */
+  transition: background-color 0.3s ease;
+  display: block; /* 中央寄せしやすく */
+  margin: 0 auto; /* 中央寄せ */
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background-color: #2980b9; /* ホバー時の色 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.timeline-empty {
+  text-align: center;
+  color: #888;
+  padding: 30px;
+  font-style: italic; /* 少し詩的な雰囲気で */
+}
+
+.post-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 各投稿にも軽い影 */
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #eee; /* 投稿者と内容の間に区切り */
+  padding-bottom: 8px;
+}
+
+.post-author {
+  margin-top: 0;
+  color: #3498db; /* 投稿者名をテーマカラーに */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.post-timestamp {
+  font-size: 0.8em;
+  color: #95a5a6; /* 少し薄めのタイムスタンプ色 */
+}
+
+.post-content {
+  margin-bottom: 0;
+  color: #34495e; /* 内容のテキスト色 */
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+  font-size: 1.05em; /* 内容を少し読みやすく */
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  color: #7f8c8d;
+  font-size: 0.9em;
 }

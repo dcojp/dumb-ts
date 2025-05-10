@@ -8,8 +8,20 @@ import type { Post, PostInput } from './types/post';
 function App() {
   // ページを読み込んだ時にローカルストレージから投稿を読み込む
   const [posts, setPosts] = React.useState<Post[]>(() => {
-    const savedPosts = localStorage.getItem('miniSocialAppPosts');
-    return savedPosts ? JSON.parse(savedPosts) : [];
+    const savedPostsJson = localStorage.getItem('miniSocialAppPosts');
+    if (savedPostsJson) {
+      try {
+        const parsedPosts = JSON.parse(savedPostsJson) as any[];
+        return parsedPosts.map(post => ({
+          ...post,
+          timestamp: new Date(post.timestamp)
+        }));
+      } catch (error) {
+        console.error("秘密の書庫の言葉を読み解けませんでしたわ…:", error);
+        return [];
+      }
+    }
+    return [];
   });
 
   // postsが更新されるたびにローカルストレージに保存する
